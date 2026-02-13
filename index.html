@@ -202,3 +202,43 @@
     </script>
 </body>
 </html>
+function displayEvents(city) {
+    const container = document.getElementById('events');
+    container.innerHTML = '';
+    
+    const filtered = city === 'all' 
+        ? allEvents 
+        : allEvents.filter(e => e.city === city);
+    
+    if (filtered.length === 0) {
+        container.innerHTML = `
+            <div class="event" style="text-align: center;">
+                😕 В этом городе пока нет событий<br>
+                <small style="color: #666;">Проверьте позже</small>
+            </div>
+        `;
+        return;
+    }
+    
+    filtered.forEach(event => {
+        // Проверяем, есть ли альтернативная ссылка
+        const hasAltSource = event.alt_source && event.alt_source !== "";
+        
+        container.innerHTML += `
+            <div class="event">
+                <span class="city-badge ${getBadgeClass(event.city)}">${event.city}</span>
+                <div class="event-title">${event.title}</div>
+                <div class="event-date">📅 ${event.date}</div>
+                <div class="event-place">📍 ${event.place}</div>
+                <div class="event-desc">${event.desc}</div>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                    <a href="${event.source}" class="event-link" target="_blank" rel="noopener noreferrer">🌐 Официальный сайт</a>
+                    ${hasAltSource ? `<a href="${event.alt_source}" class="event-link" style="background: #833AB4;" target="_blank" rel="noopener noreferrer">📱 Instagram</a>` : ''}
+                </div>
+                <small style="display: block; margin-top: 8px; color: #999; font-size: 11px;">
+                    ⚠️ Если официальный сайт не открывается, попробуйте Instagram
+                </small>
+            </div>
+        `;
+    });
+}
