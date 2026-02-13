@@ -106,40 +106,28 @@
     </div>
 
     <script>
-        let allEvents = [
-            {
-                title: "Республиканский турнир «Qazaq Batyry»",
-                date: "14 февраля 2026, 10:00",
-                place: "Дворец единоборств, Астана",
-                desc: "Соревнования по қазақ күресі, арқан тарту",
-                source: "https://www.gov.kz",
-                city: "Астана"
-            },
-            {
-                title: "Лекция «Как открыть бизнес с нуля»",
-                date: "21 февраля 2026, 15:00",
-                place: "Astana Hub, Астана",
-                desc: "Бесплатная лекция для предпринимателей",
-                source: "https://astanahub.com",
-                city: "Астана"
-            },
-            {
-                title: "Фестиваль «Танцы на льду»",
-                date: "15 февраля 2026, 12:00",
-                place: "Медео, Алматы",
-                desc: "Показательные выступления фигуристов",
-                source: "https://medey.kz",
-                city: "Алматы"
-            },
-            {
-                title: "Выставка «Золотой человек»",
-                date: "Среда - бесплатно, 10:00-18:00",
-                place: "Национальный музей, Астана",
-                desc: "Постоянная экспозиция",
-                source: "https://nationalmuseum.kz",
-                city: "Астана"
-            }
-        ];
+        let allEvents = [];
+
+        // Загружаем события из файла
+        fetch('events.json')
+            .then(response => response.json())
+            .then(events => {
+                allEvents = events;
+                displayEvents('all');
+            })
+            .catch(error => {
+                console.log('Ошибка загрузки событий', error);
+                // Если файл не загрузится, покажем тестовое событие
+                allEvents = [{
+                    title: "Сайт работает",
+                    date: "Сейчас",
+                    place: "Астана / Алматы",
+                    desc: "События загружаются... Обновите страницу через минуту",
+                    source: "#",
+                    city: "Астана"
+                }];
+                displayEvents('all');
+            });
         
         function displayEvents(city) {
             const container = document.getElementById('events');
@@ -170,9 +158,6 @@
             event.target.classList.add('active');
             displayEvents(city);
         }
-        
-        // Показываем все события при загрузке
-        displayEvents('all');
     </script>
 </body>
 </html>
