@@ -2,221 +2,109 @@
   {
     "title": "Фестиваль «Танцы на льду»",
     "date": "15 февраля 2026, 12:00",
-    "place": "Медео",
+    "place": "Медео, Алматы",
     "desc": "Показательные выступления фигуристов. Вход свободный.",
     "source": "https://medey.kz/",
-    "alt_source": "https://www.instagram.com/medey_official/",
     "city": "Алматы",
     "category": "спорт"
   },
   {
     "title": "Бесплатный концерт оркестра",
     "date": "22 февраля 2026, 17:00",
-    "place": "Дворец Республики (фойе)",
+    "place": "Дворец Республики (фойе), Алматы",
     "desc": "Классическая музыка. Вход свободный.",
     "source": "https://almaty.gov.kz/",
-    "alt_source": "https://www.instagram.com/almaty_akimat/",
     "city": "Алматы",
     "category": "музыка"
   },
   {
-    "title": "Выставка современного искусства",
-    "date": "Среда - бесплатно, 12:00-20:00",
-    "place": "Центр «Целинный», ул. Кабанбай батыра 83",
-    "desc": "Работы казахстанских художников. По средам вход свободный.",
-    "source": "https://www.tselinny.org/",
-    "alt_source": "https://www.instagram.com/tselinny/",
-    "city": "Алматы",
-    "category": "искусство"
-  },
-  {
     "title": "Республиканский турнир «Qazaq Batyry»",
     "date": "14 февраля 2026, 10:00",
-    "place": "Дворец единоборств им. Жаксылыка Ушкемпирова",
+    "place": "Дворец единоборств, Астана",
     "desc": "Соревнования по қазақ күресі, арқан тарту, аударыспақ.",
     "source": "https://www.gov.kz/memleket/entities/astana",
-    "alt_source": "https://www.instagram.com/astana_akimat/",
     "city": "Астана",
     "category": "спорт"
   },
   {
-    "title": "Лекция «Как открыть бизнес с нуля»",
-    "date": "21 февраля 2026, 15:00",
-    "place": "Astana Hub, пр. Мангилик Ел 55/8",
-    "desc": "Бесплатная лекция для начинающих предпринимателей.",
-    "source": "https://astanahub.com/ru/events",
-    "alt_source": "https://www.instagram.com/astanahub/",
-    "city": "Астана",
-    "category": "бизнес"
-  },
-  {
     "title": "Выставка «Золотой человек»",
     "date": "Среда - бесплатно, 10:00-18:00",
-    "place": "Национальный музей РК",
+    "place": "Национальный музей, Астана",
     "desc": "Постоянная экспозиция. Каждую среду вход бесплатный.",
     "source": "https://nationalmuseum.kz/",
-    "alt_source": "https://www.instagram.com/nationalmuseum.kz/",
     "city": "Астана",
     "category": "культура"
   },
   {
     "title": "Фестиваль тюльпанов",
     "date": "15 марта 2026, 11:00",
-    "place": "Дендропарк",
+    "place": "Дендропарк, Шымкент",
     "desc": "Ежегодный фестиваль цветения. Бесплатные экскурсии.",
     "source": "https://shymkent.gov.kz/",
-    "alt_source": "https://www.instagram.com/shymkent_akimat/",
     "city": "Шымкент",
     "category": "фестиваль"
-  },
-  {
-    "title": "Бесплатные занятия по футболу",
-    "date": "По воскресеньям, 16:00",
-    "place": "Стадион «Кажымукан»",
-    "desc": "Тренировки для детей от 7 до 14 лет.",
-    "source": "https://shymkent.gov.kz/",
-    "alt_source": "https://www.instagram.com/shymkent_sport/",
-    "city": "Шымкент",
-    "category": "спорт"
   },
   {
     "title": "Городской конкурс снежных фигур",
     "date": "21-22 февраля 2026, 12:00",
-    "place": "Центральный парк",
+    "place": "Центральный парк, Актобе",
     "desc": "Соревнования по созданию снежных скульптур. Призы.",
     "source": "https://aktobe.gov.kz/",
-    "alt_source": "https://www.instagram.com/aktobe_akimat/",
     "city": "Актобе",
     "category": "фестиваль"
-  },
-  {
-    "title": "Концерт народной музыки",
-    "date": "7 марта 2026, 16:00",
-    "place": "Дворец культуры",
-    "desc": "Выступление фольклорных коллективов области.",
-    "source": "https://aktobe.gov.kz/",
-    "alt_source": "https://www.instagram.com/aktobe_culture/",
-    "city": "Актобе",
-    "category": "музыка"
   },
   {
     "title": "Шахтёрский праздник",
     "date": "25 февраля 2026, 12:00",
-    "place": "Площадь Независимости",
+    "place": "Площадь Независимости, Караганда",
     "desc": "Концерт, ярмарка, выставка шахтёрской техники.",
     "source": "https://karaganda.gov.kz/",
-    "alt_source": "https://www.instagram.com/karaganda_akimat/",
     "city": "Караганда",
     "category": "праздник"
-  },
-  {
-    "title": "Театральная гостиная",
-    "date": "Каждую среду, 18:30",
-    "place": "Областной театр драмы",
-    "desc": "Бесплатные лекции об истории театра.",
-    "source": "https://karaganda.gov.kz/",
-    "alt_source": "https://www.instagram.com/karaganda_theatre/",
-    "city": "Караганда",
-    "category": "культура"
   },
   {
     "title": "Экскурсия по древнему Тараза",
     "date": "Каждую субботу, 11:00",
-    "place": "Мавзолей Карахана",
+    "place": "Мавзолей Карахана, Тараз",
     "desc": "Бесплатные пешие экскурсии по историческим местам.",
     "source": "https://taraz.gov.kz/",
-    "alt_source": "https://www.instagram.com/taraz_tourism/",
     "city": "Тараз",
     "category": "история"
   },
   {
-    "title": "Фестиваль национальной кухни",
-    "date": "14 февраля 2026, 13:00",
-    "place": "Центральный парк",
-    "desc": "Дегустация блюд казахской кухни, мастер-классы.",
-    "source": "https://taraz.gov.kz/",
-    "alt_source": "https://www.instagram.com/taraz_food/",
-    "city": "Тараз",
-    "category": "фестиваль"
-  },
-  {
     "title": "Зимний фестиваль на Иртыше",
     "date": "15-16 февраля 2026, 12:00",
-    "place": "Набережная",
+    "place": "Набережная, Павлодар",
     "desc": "Катание на собачьих упряжках, снежные городки.",
     "source": "https://pavlodar.gov.kz/",
-    "alt_source": "https://www.instagram.com/pavlodar_fest/",
     "city": "Павлодар",
     "category": "фестиваль"
-  },
-  {
-    "title": "Бесплатный каток",
-    "date": "Ежедневно, 11:00-20:00",
-    "place": "Стадион «Шахтёр»",
-    "desc": "Со своими коньками бесплатно. Прокат платный.",
-    "source": "https://pavlodar.gov.kz/",
-    "alt_source": "https://www.instagram.com/pavlodar_sport/",
-    "city": "Павлодар",
-    "category": "спорт"
   },
   {
     "title": "Горнолыжный день",
     "date": "Каждые выходные, 10:00-17:00",
-    "place": "Горнолыжная база «Алтайские Альпы»",
+    "place": "Горнолыжная база, Усть-Каменогорск",
     "desc": "Бесплатные подъёмники для детей до 14 лет.",
     "source": "https://uk.gov.kz/",
-    "alt_source": "https://www.instagram.com/uk_sport/",
     "city": "Усть-Каменогорск",
     "category": "спорт"
-  },
-  {
-    "title": "Концерт «Молодые голоса»",
-    "date": "21 февраля 2026, 17:00",
-    "place": "Дворец культуры",
-    "desc": "Выступление молодых вокалистов области.",
-    "source": "https://uk.gov.kz/",
-    "alt_source": "https://www.instagram.com/uk_culture/",
-    "city": "Усть-Каменогорск",
-    "category": "музыка"
   },
   {
     "title": "Литературные чтения у Абая",
     "date": "Каждую среду, 15:00",
-    "place": "Дом-музей Абая",
+    "place": "Дом-музей Абая, Семей",
     "desc": "Чтение стихов, лекции о жизни великого поэта.",
     "source": "https://semey.gov.kz/",
-    "alt_source": "https://www.instagram.com/semey_museum/",
     "city": "Семей",
     "category": "культура"
   },
   {
-    "title": "Ярмарка «Город мастеров»",
-    "date": "28 февраля 2026, 11:00-16:00",
-    "place": "Центральная площадь",
-    "desc": "Продажа сувениров, мастер-классы для детей.",
-    "source": "https://semey.gov.kz/",
-    "alt_source": "https://www.instagram.com/semey_fair/",
-    "city": "Семей",
-    "category": "ярмарка"
-  },
-  {
     "title": "Масленица",
     "date": "1 марта 2026, 12:00",
-    "place": "Городской парк",
+    "place": "Городской парк, Уральск",
     "desc": "Проводы зимы, блины, конкурсы, сожжение чучела.",
     "source": "https://uralsk.gov.kz/",
-    "alt_source": "https://www.instagram.com/uralsk_fest/",
     "city": "Уральск",
     "category": "праздник"
-  },
-  {
-    "title": "Бесплатный каток",
-    "date": "Ежедневно, 10:00-22:00",
-    "place": "Стадион «Динамо»",
-    "desc": "Со своими коньками бесплатно.",
-    "source": "https://uralsk.gov.kz/",
-    "alt_source": "https://www.instagram.com/uralsk_sport/",
-    "city": "Уральск",
-    "category": "спорт"
   }
 ]
