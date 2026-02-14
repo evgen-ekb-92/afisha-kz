@@ -3,87 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Афиша Казахстана</title>
+    <title>Free Events in Major US Cities</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f5f5; padding: 15px; }
-        h1 { font-size: 24px; margin-bottom: 20px; color: #1e3c72; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f0f4fa; }
+        .header { 
+            background: linear-gradient(135deg, #002868 0%, #BF0A30 100%); 
+            color: white; 
+            padding: 30px 15px; 
+            text-align: center; 
+        }
+        .header h1 { font-size: 1.8em; margin-bottom: 5px; }
+        .header p { font-size: 1em; opacity: 0.9; }
+        .city-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            margin: 15px 10px;
+        }
+        .city-btn {
+            padding: 8px 15px;
+            border: none;
+            background: white;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: 0.2s;
+            border: 1px solid #ddd;
+        }
+        .city-btn.active {
+            background: #BF0A30;
+            color: white;
+            border-color: #BF0A30;
+        }
+        .container { max-width: 800px; margin: 0 auto; padding: 10px 15px; }
         .event { 
             background: white; 
             border-radius: 10px; 
             padding: 15px; 
             margin-bottom: 15px; 
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            border-left: 5px solid #2a5298;
+            border-left: 5px solid #BF0A30;
         }
-        .city-badge {
-            display: inline-block;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            margin-bottom: 10px;
-            color: white;
-            background: #2a5298;
-        }
-        .event-title { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
-        .event-date { color: #2a5298; margin-bottom: 5px; }
-        .event-place { color: #666; margin-bottom: 5px; }
-        .event-desc { color: #444; margin-bottom: 15px; font-size: 14px; }
+        .event-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; color: #002868; }
+        .event-date { color: #BF0A30; margin-bottom: 4px; font-size: 14px; font-weight: 500; }
+        .event-place { color: #666; margin-bottom: 4px; font-size: 14px; }
+        .event-desc { color: #444; margin-bottom: 10px; font-size: 13px; }
         .event-link { 
-            display: inline-block;
-            padding: 8px 15px; 
+            display: inline-block; 
+            background: #002868; 
+            color: white; 
+            padding: 6px 15px; 
             border-radius: 5px; 
             text-decoration: none; 
-            font-size: 14px;
-            color: white;
-            background: #2a5298;
-        }
-        .warning {
-            background: #fff3cd;
-            border: 1px solid #ffeeba;
-            color: #856404;
-            padding: 10px;
-            border-radius: 5px;
-            margin: 15px 0;
             font-size: 13px;
+            transition: 0.2s;
+        }
+        .event-link:hover { background: #BF0A30; }
+        .city-badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 11px;
+            margin-bottom: 8px;
+            color: white;
+            background: #002868;
+        }
+        .badge-Нью-Йорк { background: #1a1a1a; }
+        .badge-Лос-Анджелес { background: #4a2c2c; }
+        .badge-Чикаго { background: #2c4a4a; }
+        .badge-Хьюстон { background: #2c4a2c; }
+        .badge-Финикс { background: #b85e00; }
+        .badge-Филадельфия { background: #4a2c6d; }
+        .badge-Сан-Антонио { background: #8B4513; }
+        .badge-Сан-Диего { background: #1E90FF; }
+        .badge-Даллас { background: #8B0000; }
+        .badge-Сан-Хосе { background: #2E8B57; }
+        .badge-Остин { background: #FF6F00; }
+        .badge-Джэксонвилл { background: #228B22; }
+        .ad { 
+            background: white; 
+            padding: 15px; 
+            text-align: center; 
+            margin: 15px 0; 
+            border-radius: 10px; 
+            border: 2px dashed #aaa;
+            font-size: 14px;
+            color: #666;
         }
         .footer { text-align: center; padding: 20px; color: #666; font-size: 13px; }
+        .update-info { 
+            background: #e8f0fe; 
+            padding: 5px 10px; 
+            border-radius: 20px; 
+            font-size: 11px; 
+            display: inline-block; 
+            margin: 5px auto;
+        }
     </style>
 </head>
 <body>
-    <h1>🎭 Бесплатные события Казахстана</h1>
-    
-    <div class="warning">
-        ⚠️ Если официальный сайт не открывается — это особенность работы интернета в Казахстане. 
-        Нажмите «Подробнее» и «Перейти на сайт», чтобы посмотреть информацию.
+    <div class="header">
+        <h1>🗽 Free Events in USA</h1>
+        <p>12 major cities • concerts • museums • parks</p>
+        <div class="update-info">Daily updates • always free</div>
     </div>
     
-    <div id="events">Загрузка...</div>
-    <div class="footer">Автоматическое обновление каждый день</div>
+    <div class="city-tabs">
+        <button class="city-btn active" onclick="filterCity('all')">🇺🇸 All</button>
+        <button class="city-btn" onclick="filterCity('Нью-Йорк')">🗽 NYC</button>
+        <button class="city-btn" onclick="filterCity('Лос-Анджелес')">🎬 LA</button>
+        <button class="city-btn" onclick="filterCity('Чикаго')">🌆 Chicago</button>
+        <button class="city-btn" onclick="filterCity('Хьюстон')">🚀 Houston</button>
+        <button class="city-btn" onclick="filterCity('Финикс')">🌵 Phoenix</button>
+        <button class="city-btn" onclick="filterCity('Филадельфия')">🏛️ Philly</button>
+        <button class="city-btn" onclick="filterCity('Сан-Антонио')">🏰 San Antonio</button>
+        <button class="city-btn" onclick="filterCity('Сан-Диего')">🌊 San Diego</button>
+        <button class="city-btn" onclick="filterCity('Даллас')">🤠 Dallas</button>
+        <button class="city-btn" onclick="filterCity('Сан-Хосе')">💻 San Jose</button>
+        <button class="city-btn" onclick="filterCity('Остин')">🎸 Austin</button>
+        <button class="city-btn" onclick="filterCity('Джэксонвилл')">🏖️ Jacksonville</button>
+    </div>
+    
+    <div class="container">
+        <div class="ad">
+            📢 Advertisement (Google AdSense)
+        </div>
+        
+        <div id="events">Loading events...</div>
+        
+        <div class="ad">
+            📢 Advertisement (Google AdSense)
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>✅ Automatically updated daily • All events are free</p>
+        <p>📅 2026 events • Click "Details" for official info</p>
+    </div>
 
     <script>
+        let allEvents = [];
+        let currentCity = 'all';
+
+        // Load events from JSON file
         fetch('events.json')
             .then(response => response.json())
             .then(events => {
-                const container = document.getElementById('events');
-                container.innerHTML = '';
-                
-                events.forEach(event => {
-                    container.innerHTML += `
-                        <div class="event">
-                            <span class="city-badge">${event.city}</span>
-                            <div class="event-title">${event.title}</div>
-                            <div class="event-date">📅 ${event.date}</div>
-                            <div class="event-place">📍 ${event.place}</div>
-                            <div class="event-desc">${event.desc}</div>
-                            <a href="${event.source}" class="event-link" target="_blank" rel="noopener noreferrer">🌐 Подробнее на сайте</a>
-                        </div>
-                    `;
-                });
+                allEvents = events;
+                displayEvents(currentCity);
             })
             .catch(error => {
-                document.getElementById('events').innerHTML = 'Ошибка загрузки событий';
+                console.log('Error loading events', error);
+                document.getElementById('events').innerHTML = 
+                    '<div class="event" style="text-align: center;">⏳ Loading events...</div>';
             });
+        
+        function getBadgeClass(city) {
+            // Simple mapping - use city name as class
+            return 'badge-' + city.replace(/[^a-zA-Zа-яА-Я-]/g, '');
+        }
+        
+        function displayEvents(city) {
+            const container = document.getElementById('events');
+            container.innerHTML = '';
+            
+            const filtered = city === 'all' 
+                ? allEvents 
+                : allEvents.filter(e => e.city === city);
+            
+            if (filtered.length === 0) {
+                container.innerHTML = `
+                    <div class="event" style="text-align: center;">
+                        😕 No events in this city yet<br>
+                        <small style="color: #666;">Check back later</small>
+                    </div>
+                `;
+                return;
+            }
+            
+            filtered.forEach(event => {
+                container.innerHTML += `
+                    <div class="event">
+                        <span class="city-badge">🇺🇸 ${event.city}</span>
+                        <div class="event-title">${event.title}</div>
+                        <div class="event-date">📅 ${event.date}</div>
+                        <div class="event-place">📍 ${event.place}</div>
+                        <div class="event-desc">${event.desc}</div>
+                        <a href="${event.source}" class="event-link" target="_blank" rel="noopener noreferrer">🔗 Details</a>
+                    </div>
+                `;
+            });
+        }
+        
+        function filterCity(city) {
+            currentCity = city;
+            document.querySelectorAll('.city-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            displayEvents(city);
+        }
     </script>
 </body>
 </html>
