@@ -1,125 +1,184 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Free Events in Major US Cities</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f0f4fa; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif; background: #f5f7fa; }
         .header { 
             background: linear-gradient(135deg, #002868 0%, #BF0A30 100%); 
             color: white; 
-            padding: 30px 15px; 
+            padding: 40px 20px; 
             text-align: center; 
+            border-bottom: 5px solid #ffffff33;
         }
-        .header h1 { font-size: 1.8em; margin-bottom: 5px; }
-        .header p { font-size: 1em; opacity: 0.9; }
+        .header h1 { font-size: 2.2em; margin-bottom: 10px; letter-spacing: -0.5px; }
+        .header p { font-size: 1.2em; opacity: 0.95; font-weight: 300; }
+        .header .flag { font-size: 1.5em; margin-top: 10px; }
         .city-tabs {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 8px;
-            margin: 15px 10px;
+            gap: 10px;
+            margin: 20px 15px;
         }
         .city-btn {
-            padding: 8px 15px;
+            padding: 10px 20px;
             border: none;
             background: white;
-            border-radius: 30px;
-            font-size: 14px;
-            font-weight: 500;
+            border-radius: 40px;
+            font-size: 15px;
+            font-weight: 600;
             cursor: pointer;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            transition: 0.2s;
-            border: 1px solid #ddd;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: all 0.2s ease;
+            border: 1px solid #e0e0e0;
+            color: #333;
+        }
+        .city-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
         .city-btn.active {
             background: #BF0A30;
             color: white;
             border-color: #BF0A30;
         }
-        .container { max-width: 800px; margin: 0 auto; padding: 10px 15px; }
+        .container { max-width: 900px; margin: 0 auto; padding: 10px 20px; }
         .event { 
             background: white; 
-            border-radius: 10px; 
-            padding: 15px; 
-            margin-bottom: 15px; 
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            border-left: 5px solid #BF0A30;
+            border-radius: 16px; 
+            padding: 20px; 
+            margin-bottom: 20px; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border-left: 6px solid #BF0A30;
+            transition: transform 0.2s;
         }
-        .event-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; color: #002868; }
-        .event-date { color: #BF0A30; margin-bottom: 4px; font-size: 14px; font-weight: 500; }
-        .event-place { color: #666; margin-bottom: 4px; font-size: 14px; }
-        .event-desc { color: #444; margin-bottom: 10px; font-size: 13px; }
+        .event:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+        .event-title { 
+            font-size: 20px; 
+            font-weight: 700; 
+            margin-bottom: 10px; 
+            color: #002868;
+            line-height: 1.3;
+        }
+        .event-date { 
+            color: #BF0A30; 
+            margin-bottom: 8px; 
+            font-size: 16px; 
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .event-place { 
+            color: #555; 
+            margin-bottom: 8px; 
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .event-desc { 
+            color: #333; 
+            margin-bottom: 15px; 
+            font-size: 15px;
+            line-height: 1.5;
+        }
         .event-link { 
             display: inline-block; 
             background: #002868; 
             color: white; 
-            padding: 6px 15px; 
-            border-radius: 5px; 
+            padding: 10px 22px; 
+            border-radius: 30px; 
             text-decoration: none; 
-            font-size: 13px;
-            transition: 0.2s;
+            font-size: 15px;
+            font-weight: 600;
+            transition: all 0.2s;
+            border: none;
+            margin-top: 5px;
         }
-        .event-link:hover { background: #BF0A30; }
+        .event-link:hover { 
+            background: #BF0A30; 
+            transform: scale(1.05);
+        }
         .city-badge {
             display: inline-block;
-            padding: 3px 10px;
-            border-radius: 15px;
-            font-size: 11px;
-            margin-bottom: 8px;
+            padding: 5px 15px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 12px;
             color: white;
             background: #002868;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
-        .badge-Нью-Йорк { background: #1a1a1a; }
-        .badge-Лос-Анджелес { background: #4a2c2c; }
-        .badge-Чикаго { background: #2c4a4a; }
-        .badge-Хьюстон { background: #2c4a2c; }
-        .badge-Финикс { background: #b85e00; }
-        .badge-Филадельфия { background: #4a2c6d; }
-        .badge-Сан-Антонио { background: #8B4513; }
-        .badge-Сан-Диего { background: #1E90FF; }
-        .badge-Даллас { background: #8B0000; }
-        .badge-Сан-Хосе { background: #2E8B57; }
-        .badge-Остин { background: #FF6F00; }
-        .badge-Джэксонвилл { background: #228B22; }
         .ad { 
-            background: white; 
-            padding: 15px; 
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 20px; 
             text-align: center; 
-            margin: 15px 0; 
-            border-radius: 10px; 
-            border: 2px dashed #aaa;
+            margin: 25px 0; 
+            border-radius: 12px; 
+            border: 2px dashed #adb5bd;
+            font-size: 16px;
+            color: #495057;
+            font-weight: 500;
+        }
+        .footer { 
+            text-align: center; 
+            padding: 30px 20px; 
+            color: #6c757d; 
             font-size: 14px;
+            background: #f8f9fa;
+            margin-top: 30px;
+            border-top: 1px solid #dee2e6;
+        }
+        .update-info { 
+            background: rgba(255,255,255,0.2); 
+            padding: 6px 15px; 
+            border-radius: 30px; 
+            font-size: 13px; 
+            display: inline-block; 
+            margin-top: 15px;
+            backdrop-filter: blur(5px);
+        }
+        .loading {
+            text-align: center;
+            padding: 40px;
+            font-size: 18px;
             color: #666;
         }
-        .footer { text-align: center; padding: 20px; color: #666; font-size: 13px; }
-        .update-info { 
-            background: #e8f0fe; 
-            padding: 5px 10px; 
-            border-radius: 20px; 
-            font-size: 11px; 
-            display: inline-block; 
-            margin: 5px auto;
+        .no-events {
+            text-align: center;
+            padding: 40px;
+            background: white;
+            border-radius: 16px;
+            color: #666;
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <h1>🗽 Free Events in USA</h1>
-        <p>12 major cities • concerts • museums • parks</p>
-        <div class="update-info">Daily updates • always free</div>
+        <h1>🎟️ Free Events in USA</h1>
+        <p>Discover free concerts, museums & activities in 12 major cities</p>
+        <div class="update-info">Updated daily • 100% free • Since 2026</div>
+        <div class="flag">🇺🇸</div>
     </div>
     
-    <div class="city-tabs">
-        <button class="city-btn active" onclick="filterCity('all')">🇺🇸 All</button>
-        <button class="city-btn" onclick="filterCity('Нью-Йорк')">🗽 NYC</button>
-        <button class="city-btn" onclick="filterCity('Лос-Анджелес')">🎬 LA</button>
+    <div class="city-tabs" id="cityTabs">
+        <button class="city-btn active" onclick="filterCity('all')">🇺🇸 All Cities</button>
+        <button class="city-btn" onclick="filterCity('Нью-Йорк')">🗽 New York</button>
+        <button class="city-btn" onclick="filterCity('Лос-Анджелес')">🎬 Los Angeles</button>
         <button class="city-btn" onclick="filterCity('Чикаго')">🌆 Chicago</button>
         <button class="city-btn" onclick="filterCity('Хьюстон')">🚀 Houston</button>
         <button class="city-btn" onclick="filterCity('Финикс')">🌵 Phoenix</button>
-        <button class="city-btn" onclick="filterCity('Филадельфия')">🏛️ Philly</button>
+        <button class="city-btn" onclick="filterCity('Филадельфия')">🏛️ Philadelphia</button>
         <button class="city-btn" onclick="filterCity('Сан-Антонио')">🏰 San Antonio</button>
         <button class="city-btn" onclick="filterCity('Сан-Диего')">🌊 San Diego</button>
         <button class="city-btn" onclick="filterCity('Даллас')">🤠 Dallas</button>
@@ -130,19 +189,20 @@
     
     <div class="container">
         <div class="ad">
-            📢 Advertisement (Google AdSense)
+            📢 Advertisement — Your ad could be here (Google AdSense)
         </div>
         
-        <div id="events">Loading events...</div>
+        <div id="events" class="loading">Loading free events...</div>
         
         <div class="ad">
-            📢 Advertisement (Google AdSense)
+            📢 Advertisement — Your ad could be here (Google AdSense)
         </div>
     </div>
     
     <div class="footer">
-        <p>✅ Automatically updated daily • All events are free</p>
-        <p>📅 2026 events • Click "Details" for official info</p>
+        <p>✅ Automatically updated daily • All events are completely free</p>
+        <p>📅 2026 events • Click "Details" for official information</p>
+        <p style="margin-top: 15px; font-size: 12px;">© 2026 FreeEventsUSA • Discover America for free</p>
     </div>
 
     <script>
@@ -151,21 +211,25 @@
 
         // Load events from JSON file
         fetch('events.json')
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
             .then(events => {
                 allEvents = events;
+                document.getElementById('events').className = '';
                 displayEvents(currentCity);
             })
             .catch(error => {
-                console.log('Error loading events', error);
-                document.getElementById('events').innerHTML = 
-                    '<div class="event" style="text-align: center;">⏳ Loading events...</div>';
+                console.log('Error loading events:', error);
+                document.getElementById('events').innerHTML = `
+                    <div class="no-events">
+                        😕 Unable to load events. Please refresh the page.
+                    </div>
+                `;
             });
-        
-        function getBadgeClass(city) {
-            // Simple mapping - use city name as class
-            return 'badge-' + city.replace(/[^a-zA-Zа-яА-Я-]/g, '');
-        }
         
         function displayEvents(city) {
             const container = document.getElementById('events');
@@ -177,9 +241,9 @@
             
             if (filtered.length === 0) {
                 container.innerHTML = `
-                    <div class="event" style="text-align: center;">
-                        😕 No events in this city yet<br>
-                        <small style="color: #666;">Check back later</small>
+                    <div class="no-events">
+                        🗽 No free events in this city at the moment<br>
+                        <small style="color: #999; margin-top: 10px; display: block;">Check back soon — we update daily!</small>
                     </div>
                 `;
                 return;
@@ -193,7 +257,7 @@
                         <div class="event-date">📅 ${event.date}</div>
                         <div class="event-place">📍 ${event.place}</div>
                         <div class="event-desc">${event.desc}</div>
-                        <a href="${event.source}" class="event-link" target="_blank" rel="noopener noreferrer">🔗 Details</a>
+                        <a href="${event.source}" class="event-link" target="_blank" rel="noopener noreferrer">🔗 Get Details</a>
                     </div>
                 `;
             });
@@ -201,11 +265,20 @@
         
         function filterCity(city) {
             currentCity = city;
+            
+            // Update active button
             document.querySelectorAll('.city-btn').forEach(btn => {
                 btn.classList.remove('active');
             });
             event.target.classList.add('active');
-            displayEvents(city);
+            
+            // Show loading state
+            document.getElementById('events').innerHTML = '<div class="loading">Loading events...</div>';
+            
+            // Display events after a tiny delay for smooth UI
+            setTimeout(() => {
+                displayEvents(city);
+            }, 100);
         }
     </script>
 </body>
