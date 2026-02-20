@@ -5,7 +5,7 @@
     "place": "Museum of Modern Art, 11 W 53rd St, Manhattan",
     "desc": "Free admission to one of NYC's most famous modern art museums. Reserve tickets online.",
     "source": "https://www.moma.org/",
-    "city": "New York",
+    "city": "Нью-Йорк",
     "category": "museum"
   },
   {
@@ -14,7 +14,7 @@
     "place": "Central Park, meet at Cherry Hill",
     "desc": "Free guided walking tours of Central Park led by volunteer guides.",
     "source": "https://www.centralpark.com/",
-    "city": "New York",
+    "city": "Нью-Йорк",
     "category": "tour"
   },
   {
@@ -23,7 +23,7 @@
     "place": "Rumsey Playfield, Central Park",
     "desc": "Free outdoor concerts featuring various artists throughout the summer.",
     "source": "https://cityparksfoundation.org/summerstage/",
-    "city": "New York",
+    "city": "Нью-Йорк",
     "category": "music"
   },
   {
@@ -32,7 +32,7 @@
     "place": "Getty Center, 1200 Getty Center Dr",
     "desc": "Free admission to museum with stunning city views and art collections.",
     "source": "https://www.getty.edu/",
-    "city": "Los Angeles",
+    "city": "Лос-Анджелес",
     "category": "museum"
   },
   {
@@ -41,7 +41,7 @@
     "place": "Levitt Pavilion, MacArthur Park",
     "desc": "Free outdoor concerts featuring diverse musical genres.",
     "source": "https://levittla.org/",
-    "city": "Los Angeles",
+    "city": "Лос-Анджелес",
     "category": "music"
   },
   {
@@ -50,7 +50,7 @@
     "place": "Griffith Observatory",
     "desc": "Free hiking trails and free admission to the observatory.",
     "source": "https://griffithobservatory.org/",
-    "city": "Los Angeles",
+    "city": "Лос-Анджелес",
     "category": "outdoor"
   },
   {
@@ -59,7 +59,7 @@
     "place": "Art Institute of Chicago, 111 S Michigan Ave",
     "desc": "Free evening admission for Illinois residents (and select dates for all).",
     "source": "https://www.artic.edu/",
-    "city": "Chicago",
+    "city": "Чикаго",
     "category": "museum"
   },
   {
@@ -68,7 +68,7 @@
     "place": "Jay Pritzker Pavilion, Millennium Park",
     "desc": "Free concerts featuring Chicago Symphony Orchestra and other artists.",
     "source": "https://www.chicago.gov/",
-    "city": "Chicago",
+    "city": "Чикаго",
     "category": "music"
   },
   {
@@ -77,7 +77,7 @@
     "place": "Navy Pier",
     "desc": "Free fireworks displays over Lake Michigan.",
     "source": "https://navypier.org/",
-    "city": "Chicago",
+    "city": "Чикаго",
     "category": "entertainment"
   },
   {
@@ -86,7 +86,7 @@
     "place": "Houston Museum of Natural Science, 5555 Hermann Park Dr",
     "desc": "Free admission to the Museum of Natural Science.",
     "source": "https://www.hmns.org/",
-    "city": "Houston",
+    "city": "Хьюстон",
     "category": "museum"
   },
   {
@@ -95,7 +95,7 @@
     "place": "Discovery Green Park, Downtown",
     "desc": "Free yoga, concerts and outdoor movies in downtown Houston.",
     "source": "https://www.discoverygreen.com/",
-    "city": "Houston",
+    "city": "Хьюстон",
     "category": "park"
   },
   {
@@ -104,7 +104,7 @@
     "place": "Desert Botanical Garden, 1201 N Galvin Pkwy",
     "desc": "Free admission for Arizona residents.",
     "source": "https://dbg.org/",
-    "city": "Phoenix",
+    "city": "Финикс",
     "category": "nature"
   },
   {
@@ -113,7 +113,7 @@
     "place": "Roosevelt Row Arts District",
     "desc": "Largest free art festival in the Southwest.",
     "source": "https://rooseveltrow.org/",
-    "city": "Phoenix",
+    "city": "Финикс",
     "category": "art"
   },
   {
@@ -122,7 +122,7 @@
     "place": "Philadelphia Museum of Art, 2600 Benjamin Franklin Pkwy",
     "desc": "Pay what you wish (suggested $1+).",
     "source": "https://philamuseum.org/",
-    "city": "Philadelphia",
+    "city": "Филадельфия",
     "category": "museum"
   },
   {
@@ -131,7 +131,7 @@
     "place": "Spruce Street Harbor Park, Delaware River waterfront",
     "desc": "Free summer park with hammocks, games and food trucks.",
     "source": "https://www.delawareriverwaterfront.com/",
-    "city": "Philadelphia",
+    "city": "Филадельфия",
     "category": "park"
   },
   {
@@ -140,7 +140,7 @@
     "place": "San Antonio Museum of Art, 200 W Jones Ave",
     "desc": "Free evening admission.",
     "source": "https://www.samuseum.org/",
-    "city": "San Antonio",
+    "city": "Сан-Антонио",
     "category": "museum"
   },
   {
@@ -149,7 +149,7 @@
     "place": "The Alamo, 300 Alamo Plaza",
     "desc": "Free admission to historic mission (timed entry required).",
     "source": "https://www.thealamo.org/",
-    "city": "San Antonio",
+    "city": "Сан-Антонио",
     "category": "history"
   },
   {
@@ -158,7 +158,7 @@
     "place": "Balboa Park, 1450 El Prado",
     "desc": "Free admission in beautiful Balboa Park.",
     "source": "https://www.sdmart.org/",
-    "city": "San Diego",
+    "city": "Сан-Диего",
     "category": "museum"
   },
   {
@@ -167,7 +167,7 @@
     "place": "La Jolla Coast",
     "desc": "Free tide pooling — observe marine life in natural pools.",
     "source": "https://www.sandiego.gov/",
-    "city": "San Diego",
+    "city": "Сан-Диего",
     "category": "nature"
   },
   {
@@ -176,7 +176,7 @@
     "place": "DMA, 1717 N Harwood St",
     "desc": "Permanent collection always free.",
     "source": "https://dma.org/",
-    "city": "Dallas",
+    "city": "Даллас",
     "category": "museum"
   },
   {
@@ -185,7 +185,7 @@
     "place": "Klyde Warren Park, 2012 Woodall Rodgers Fwy",
     "desc": "Free activities in a park built over a highway.",
     "source": "https://www.klydewarrenpark.org/",
-    "city": "Dallas",
+    "city": "Даллас",
     "category": "park"
   },
   {
@@ -194,7 +194,7 @@
     "place": "San Jose Museum of Art, 110 S Market St",
     "desc": "Free admission on first weekend of month.",
     "source": "https://sjmusart.org/",
-    "city": "San Jose",
+    "city": "Сан-Хосе",
     "category": "museum"
   },
   {
@@ -203,7 +203,7 @@
     "place": "The Tech Interactive, 201 S Market St",
     "desc": "Free access to some exhibits on certain days.",
     "source": "https://www.thetech.org/",
-    "city": "San Jose",
+    "city": "Сан-Хосе",
     "category": "education"
   },
   {
@@ -212,7 +212,7 @@
     "place": "City Hall, 301 W 2nd St",
     "desc": "Free live music at City Hall lawn.",
     "source": "https://www.austintexas.gov/",
-    "city": "Austin",
+    "city": "Остин",
     "category": "music"
   },
   {
@@ -221,7 +221,7 @@
     "place": "Barton Springs Pool, Zilker Park",
     "desc": "Free early morning swimming in natural spring pool.",
     "source": "https://www.austintexas.gov/",
-    "city": "Austin",
+    "city": "Остин",
     "category": "sports"
   },
   {
@@ -230,7 +230,7 @@
     "place": "Cummer Museum, 829 Riverside Ave",
     "desc": "Free admission with beautiful gardens.",
     "source": "https://www.cummermuseum.org/",
-    "city": "Jacksonville",
+    "city": "Джэксонвилл",
     "category": "museum"
   },
   {
@@ -239,7 +239,7 @@
     "place": "Seawalk Pavilion, Jacksonville Beach",
     "desc": "Free beach concerts.",
     "source": "https://www.jacksonvillebeach.org/",
-    "city": "Jacksonville",
+    "city": "Джэксонвилл",
     "category": "music"
   }
 ]
